@@ -21,7 +21,7 @@ source:
 	rm -rf $(SOURCE_PATH) $(SOURCE_TARBALL)
 	mkdir $(SOURCE_PATH)
 	curl -sLo $(SOURCE_TARBALL) $(SOURCE_URL)
-	tar -x -C $(SOURCE_PATH) -f $(SOURCE_TARBALL)
+	tar -x -C $(SOURCE_PATH) -f $(SOURCE_TARBALL) --strip-components=1
 
 manual:
 	./meta/launch /bin/bash || true
