@@ -15,7 +15,7 @@ SOURCE_TARBALL = /tmp/source.tar.gz
 
 .PHONY : default source manual container build version push local
 
-default: source container
+default: container
 
 source:
 	rm -rf $(SOURCE_PATH) $(SOURCE_TARBALL)
@@ -23,7 +23,7 @@ source:
 	curl -sLo $(SOURCE_TARBALL) $(SOURCE_URL)
 	tar -x -C $(SOURCE_PATH) -f $(SOURCE_TARBALL)
 
-manual: source
+manual:
 	./meta/launch /bin/bash || true
 
 container:
