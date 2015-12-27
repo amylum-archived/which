@@ -1,0 +1,13 @@
+item do
+  expected do
+    url_xpath
+    url 'http://ftp.gnu.org/gnu/which/'
+    xpath '/html/body/table/tr[last()-1]/td[2]'
+    regex /^which-([\d.]+\d)\.tar\.gz\.sig$/
+  end
+
+  actual do
+    git_tag
+    regex /^(.*)-\d+$/
+  end
+end
