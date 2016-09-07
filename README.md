@@ -1,6 +1,8 @@
 which
 ==========
 
+[![Build Status](https://img.shields.io/circleci/project/amylum/which.svg)](https://circleci.com/gh/amylum/which)
+[![GitHub release](https://img.shields.io/github/release/amylum/which.svg)](https://github.com/amylum/which/releases)
 [![GPL Licensed](http://img.shields.io/badge/license-GPL2+-green.svg)](https://tldrlegal.com/license/gnu-general-public-license-v2)
 
 Package repo for [which](http://savannah.gnu.org/projects/which)

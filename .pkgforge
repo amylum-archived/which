@@ -1,0 +1,27 @@
+name 'which'
+org 'amylum'
+
+license 'COPYING'
+
+which_version = '2.21'
+
+source(
+  type: 'tar',
+  url: "https://ftp.gnu.org/gnu/which/which-#{which_version}.tar.gz"
+)
+
+configure_flags(
+  prefix: '/usr'
+)
+
+harden
+
+build do
+  configure
+  make
+  install
+end
+
+test do
+  run 'which --version'
+end
